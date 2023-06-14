@@ -2452,9 +2452,13 @@
     <script>
       //Exercicio 3
       const intersectionObserver = new IntersectionObserver((entries) => {
-          console.log('visualizou FALE COM O ATENDENTE');
-      });
-      intersectionObserver.observe(document.querySelector('#call-me-baby'));
+    		entries.forEach((entry) => {
+        		if(entry.isIntersecting == true){
+              			console.log('visualizou FALE COM O ATENDENTE');
+        		}
+    	 	});
+	});
+	intersectionObserver.observe(document.querySelector('#call-me-baby'));
     </script>
     <script>
       //Exercicios 4 e 5
@@ -2542,9 +2546,14 @@
     <script>
       //Exercicio 7
       const bserver = new IntersectionObserver((entries) => {
-        console.log('visualizou BANHEIRO');
-      });
-      bserver.observe(document.querySelector('.img-circle.img-responsive'));
+    		entries.forEach((entry) => {
+        		if(entry.isIntersecting == true){
+              		console.log('visualizou o BANHEIRO');
+        		}
+    		});
+	});
+	bserver.observe(document.querySelector('.img-circle.img-responsive'));
+
       
     </script>
   </body>
