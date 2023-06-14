@@ -2427,5 +2427,125 @@
         });
       }, 5000);
     </script>
+    <script>
+    //Exercicio 1 
+        document.addEventListener('scroll', function(){
+	      var alturaAtual = window.scrollY + document.documentElement.clientHeight;
+	      var alturaTotal = Math.max(
+	      document.body.scrollHeight, document.documentElement.scrollHeight,
+	      document.body.offsetHeight, document.documentElement.offsetHeight,
+	      document.body.clientHeight, document.documentElement.clientHeight
+        );
+	      var porcentagemScroll = alturaAtual / alturaTotal;
+        if (porcentagemScroll === 1)
+            return console.log('Rolou até o final')
+        });
+    </script>
+    <script>
+    //Exercicio 2
+        var cc = document.querySelector('a.page-scroll.btn.btn-xl')
+        cc.addEventListener('click', function (event) {
+            console.log('Clicou em FAÇA UM ORÇAMENTO')
+        });
+
+    </script>
+    <script>
+      //Exercicio 3
+      const intersectionObserver = new IntersectionObserver((entries) => {
+          console.log('visualizou FALE COM O ATENDENTE');
+      });
+      intersectionObserver.observe(document.querySelector('#call-me-baby'));
+    </script>
+    <script>
+      //Exercicios 4 e 5
+      
+      //Pegando Nome
+      const nm = document.querySelector("#name");
+      let tr1 = false;
+      nm.addEventListener('change', function(event) {
+        console.log("Preencheu campo Nome");
+        tr1 = true;
+      if(tr1 == true && tr2 == true && tr3 == true && tr4 == true && tr5 == true )
+        console.log("Preencheu todo o formulario");
+      });
+
+      //Pegando Email
+      let tr2 = false;
+      const emm = document.querySelector("#email");
+      emm.addEventListener('change', function (event) {
+      if (emm.getAttribute("aria-invalid") == "false") {
+          console.log("Preencheu campo Email");
+	        tr2 = true;
+      if(tr1 == true && tr2 == true && tr3 == true && tr4 == true && tr5 == true )
+          console.log("Preencheu todo o formulario");
+      }
+      });
+
+      //Pegando Telefone
+      const tl= document.querySelector("#phone");
+      let tr3 = false;
+      tl.addEventListener('change', function(event) {
+          console.log("Preencheu campo Telefone");
+          tr3 = true;
+          if(tr1 == true && tr2 == true && tr3 == true && tr4 == true && tr5 == true )
+          console.log("Preencheu todo o formulario");
+      });
+
+      //Pegando Endereço
+      const er = document.querySelector("#address");
+      let tr4 = false;
+      er.addEventListener('change', function(event) {
+          console.log("Preencheu campo Endereço");
+          tr4 = true;
+          if(tr1 == true && tr2 == true && tr3 == true && tr4 == true && tr5 == true )
+          console.log("Preencheu todo o formulario");
+      });
+
+      //Pegando Mensagem
+      const mg = document.querySelector("#message");
+      let tr5 = false;
+      mg.addEventListener('change', function(event) {
+          console.log("Preencheu campo Mensagem");
+          tr5 = true;
+          if(tr1 == true && tr2 == true && tr3 == true && tr4 == true && tr5 == true )
+          console.log("Preencheu todo o formulario");
+      });
+    </script>
+
+    <script>
+      //Exercicio 6
+      var serv = document.querySelector('a.page-scroll[href="#services"]');
+      serv.addEventListener('click', function(event) {
+          console.log('Clicou em SERVIÇOS')
+      });
+
+      var port = document.querySelector('a.page-scroll[href="#portfolio"]');
+      port.addEventListener('click', function(event) {
+          console.log('Clicou em PORTIFÓLIO')
+      });
+
+      var sobr = document.querySelector('a.page-scroll[href="#about"]');
+      sobr.addEventListener('click', function(event) {
+          console.log('Clicou em SOBRE')
+      });
+
+      var time = document.querySelector('a.page-scroll[href="#team"]');
+      time.addEventListener('click', function(event) {
+          console.log('Clicou em TIME')
+      });
+
+      var cont = document.querySelector('a.page-scroll[href="#contact"]');
+      cont.addEventListener('click', function(event) {
+          console.log('Clicou em CONTATO')
+      });
+    </script>
+    <script>
+      //Exercicio 7
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        console.log('visualizou BANHEIRO');
+      });
+      intersectionObserver.observe(document.querySelector('.img-circle.img-responsive'));
+      
+    </script>
   </body>
 </html>
